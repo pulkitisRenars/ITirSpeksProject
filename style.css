@@ -79,7 +79,7 @@ header .navbar a{
     font-size: 1.5rem;
     color: white;
     margin-left: 80px;
-    text-shadow: -1px -1px 0 #777, 1px -1px 0 #777, -1px 1px 0 #777, 1px 1px 0 #777;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 header .navbar a:hover{
