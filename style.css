@@ -52,6 +52,7 @@ body::after {
 
 
 header .navbar{
+    position: relative;
     top:0; left:0; right: 0;
     padding:2rem 9%;
 }
@@ -78,16 +79,14 @@ header .navbar{
 header .navbar a{
     font-size: 1.5rem;
     color: white;
-    margin-left: 80px;
+    margin-right: 80px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+     position: relative;
 }
 
 header .navbar a:hover{
-    border: 2px solid white;
-    padding: 5px;
-    border-radius: 55px;
-    margin-top: 200px;
-    background: rgba(95, 150, 95, 0.5);
+    text-align: center;
+    color: rgb(167, 161, 161);
 }
 
 
