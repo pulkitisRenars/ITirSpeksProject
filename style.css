@@ -201,6 +201,34 @@ width: 70%;
     color: #444;
 }
 
+.vakances p{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    padding: 15px;
+    position: relative;
+    color: #777;
+    width: 90%;
+    text-align: justify;
+    font-size: 32px;
+    bottom: 30px;
+}
+
+.vakances a{
+    background-color: rgb(113, 177, 113);
+    color: white;
+    border-radius: 15px;
+    float:right;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.vakances a:hover{
+    background-color: rgb(104, 156, 104);
+    color: white;
+    
+}
+
 
 .box p{
     position: relative;
