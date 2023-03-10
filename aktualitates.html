@@ -13,32 +13,74 @@
 <header>
     <div class="logo">
 
-    <a href="index.html"><img src="images/Walter-White-Breaking-Bad-Series-PNG-Pic.png" alt="bilde"> IT ir Spēks! </a>
+    <a href="index.html">IT ir spēks! </a>
    
     </div>
 <nav class="navbar">
+    <a href="index.html">Sākums</a>
     <a href="aktualitates.html">Aktualitātes</a>
     <a href="vakances.html">Vakances</a>
     <a href="kontakti.html">Kontakti</a>
-    <a href="login.html"><i class="fas fa-sign-in"></i></a>
+    <a id="login-btn" onclick="openForm()"><i class="fas fa-sign-in"></i></a>
+    <div class="login-popup">
+        <div class="close" onclick="closeForm()">×</div>
+        <h2>Pieslēgties</h2>
+        <form>
+          <input type="text" placeholder="Lietotājvārds" required>
+          <input type="password" placeholder="Parole" required>
+          <button type="submit">Autorizēties</button>
+        </form>
+      </div>
 </nav>
 </header>
 <div class="box-container">
     <div class="box">
-        <div class="content"></div>
-<h2>Text</h2>
+        <h2>Mūsdienu IT aktualitātes</h2>
+        <hr>
+        <div class="aktualitates">
+                    <div class="akt"><a href="aktualitate.html">
+                        <h3>IT nozarē atklāts jauns atvieglojums!</h3>
+                        <hr>
+                    <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
+                    </a></div>
+
+                    <div class="akt"><a href="aktualitate.html">
+                        <h3>IT nozarē atklāts jauns atvieglojums!</h3>
+                        <hr>
+                    <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
+                    </a></div>
+
+                    
+                    <div class="akt"><a href="aktualitate.html">
+                        <h3>IT nozarē atklāts jauns atvieglojums!</h3>
+                        <hr>
+                    <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
+                    </a></div>
+
+                    <div class="akt"><a href="aktualitate.html">
+                        <h3>IT nozarē atklāts jauns atvieglojums!</h3>
+                        <hr>
+                    <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
+                    </a></div>
+
+                    <div class="akt"><a href="aktualitate.html">
+                        <h3>IT nozarē atklāts jauns atvieglojums!</h3>
+                        <hr>
+                    <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
+                    </a></div>
+
+                    <div class="akt"><a href="aktualitate.html">
+                        <h3>IT nozarē atklāts jauns atvieglojums!</h3>
+                        <hr>
+                    <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
+                    </a></div>
+        </div>
     </div>
-    <div class="box">
-        <h2>Text</h2>
-        <div class="content"></div>
-    </div>
-    <div class="box">
-        <h2>Text</h2>
-        <div class="content"></div>
-            </div>
 </div>
+<script src="script.js"></script>
+
 <footer>
-<h1>IT ir Spēks &copy;</h1>
+<h1>IT ir Spēks &copy; 2023</h1>
 <hr>
 <p class="STD"><b>S</b>mart <b>T</b>ech <b>D</b>evelopment<p>
 </footer>

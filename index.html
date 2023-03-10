@@ -8,20 +8,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
 </head>
+
+
 <body>
     <div class="page-container">
-<header>
+    <header>
     <div class="logo">
-    <a href="index.html"> IT ir Spēks! </a>
+    <a href="index.html"> IT ir spēks! </a>
     </div>
 
 <nav class="navbar">
+    <a href="index.html" onload="enableOverflow()">Sākums</a>
     <a href="aktualitates.html">Aktualitātes</a>
     <a href="vakances.html">Vakances</a>
     <a href="kontakti.html">Kontakti</a>
-    <a href="login.html"><i class="fas fa-sign-in"></i></a>
+    <a id="login-btn" onclick="openForm()"><i class="fas fa-sign-in"></i></a>
+    </div>
+    
+    <div class="login-popup">
+        <div class="close" onclick="closeForm()">×</div>
+        <h2>Pieslēgties</h2>
+        <form>
+          <input type="text" placeholder="Lietotājvārds" required>
+          <input type="password" placeholder="Parole" required>
+          <button type="submit">Autorizēties</button>
+        </form>
+      </div>
+    
 </nav>
 </header>
+
 
 <div class="home">
     <h1><span class="auto-type"></span></h1>
@@ -30,17 +46,10 @@
 
 <div class="box-container">
     <div class="box">
-        <div class="content"></div>
 <h2>Text</h2>
+<hr>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis repellat harum maxime blanditiis, quae error laudantium minima explicabo quis aspernatur architecto earum voluptatem provident deserunt, possimus officia enim iure commodi nihil corrupti inventore? Assumenda numquam quod voluptas cumque vero iure architecto, soluta cum itaque fugiat nisi? Sequi consequuntur perspiciatis quo.</p>
     </div>
-    <div class="box">
-        <h2>Text</h2>
-        <div class="content"></div>
-    </div>
-    <div class="box">
-        <h2>Text</h2>
-        <div class="content"></div>
-            </div>
 </div>
 <footer>
 <h1>IT ir Spēks &copy; 2023</h1>
@@ -49,15 +58,6 @@
 </footer>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script>
-    var typed = new Typed(".auto-type", {
-        strings: ["Attīsti IT jomu šodien!", "Pievienojies vakancei!", "Iepazīsti IT pasauli!", "Izzini jaunākās tendences!"],
-        typeSpeed: 55,
-        backSpeed: 30,
-        backDelay: 1000,
-        loop: true
-    })
-
-</script>
+<script src="script.js"></script>
 </body>
 </html>

@@ -11,6 +11,9 @@
     text-decoration: none;
 }
 
+.overflow-hidden{
+    overflow: hidden;
+}
 .page-container{
     display: flex;
     flex-direction: column;
@@ -20,8 +23,8 @@
 
 body::after {
     content: "";
-    width: 1920px;
-    height: 1080px;
+    width: 100%;
+    height: 100%;
     background: url(images/03.jpg);
     filter: blur(3px);
     -webkit-filter: blur(6px);
@@ -109,18 +112,242 @@ header .navbar a:hover{
 
 
 .home{
-    margin:30% 0;
+    margin:22% 0;
 }
 
 .home h1{
     position: sticky;
     font-size: 6rem;
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: "Dancing Script";
-    margin-left: 15%;
+    margin-left: 9%;
     font-style: italic;
 }
 
+
+.blur {
+    z-index: 2;
+    filter: blur(5px);
+  }
+
+.login-popup {
+    z-index: 9999;
+    display: none;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 600px;
+    height: 300px;
+    overflow: auto;
+    background-color: rgb(94, 146, 94);
+    border-radius: 35px;
+    box-shadow:0 .5rem 4rem rgba(0,0,0, 12);
+    overflow: hidden;
+  }
+
+  
+  .login-popup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .login-popup input[type=text], .login-popup input[type=password] {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+  }
+  
+  .login-popup button[type=submit] {
+    width: 60%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .login-popup button[type=submit]:hover {
+    background-color: #45a049;
+    cursor: pointer;
+  }
+  
+  .login-popup h2 {
+    margin-top: 30px;
+    margin-bottom: 0;
+    text-align: center;
+    color: white;
+  }
+  
+  .login-popup .close {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .login-popup .close:hover {
+    color: #bbb;
+  }
+  
+  .popup-form {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .popup-form .login-popup {
+    display: block;
+  }
+
+.aktualitates{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.9rem;
+    margin: 3rem 0;
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+
+.aktualitates .akt {
+    padding: 1rem;
+    text-align: center;
+    border: 0.1rem solid rgba(0,0,0,.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    background: rgb(94, 146, 94);
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.aktualitates .akt:hover{
+    transition: 0.5s;
+    transform: translateY(-20px);
+    background: rgb(67, 104, 67);
+
+}
+
+.aktualitates h3{
+    color: white;
+    font-size: 24px;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    position: relative;
+    width: 80%;
+    text-align: center;
+}
+
+.aktualitates hr{
+    position: relative;
+    margin: 1% auto 15px auto;
+    background-color: white;
+    width: 90%;
+    height: 3px;
+}
+
+.aktualitates p{
+    position: relative;
+    color: #eee;
+    width: 90%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.box .cont{
+    position: relative;
+    margin: 2% auto 0 auto;
+    max-width: 90%;
+    text-align: justify;
+    font-size: 22px;
+    color: white;
+}
+
+.box .authDate{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.authDate p{
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    max-width: 20%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.vakances{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.9rem;
+    margin: 3rem 0;
+    margin-right: 5rem;
+    margin-left: 5rem;
+        
+}
+
+.vakances .vak{
+    padding: 1rem;
+    text-align: center;
+    border: 0.1rem solid rgba(0,0,0,.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    background: rgb(94, 146, 94);
+    height: 100%;
+}
+
+.vakances h3{
+    color: white;
+    font-size: 24px;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    position: relative;
+    width: 80%;
+    text-align: center;
+}
+
+.vakances hr{
+    position: relative;
+    margin: 1% auto 15px auto;
+    background-color: white;
+    width: 90%;
+    height: 3px;
+}
+
+.vakances p{
+    position: relative;
+    color: #eee;
+    width: 90%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.vakances .vak:hover{
+    transition: 0.5s;
+    transform: translateY(-20px);
+    background: rgb(67, 104, 67);
+}
 
 
 hr{
@@ -128,7 +355,7 @@ hr{
     clear:both;
     display:block;
     width: 47%;
-    margin: 30px 0 0 12%;               
+    margin: 30px 0 0 6%;               
     background-color: rgb(94, 148, 94);
     height: 6px;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -137,10 +364,10 @@ hr{
 .box-container{
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 80%;
-    height: 80%;
-    background-color: white;
+    height: 100%;
+    background-color: rgba(255,255,255,0.7);
     border-radius: 15px;
     margin: 85px auto auto auto;
     top:0px;
@@ -148,12 +375,15 @@ hr{
     right:0px;
     bottom:0px;
     z-index: 0;
+    position: relative;
 }
+
+
 
 .box{
     background-color: rgb(113, 177, 113);
-    height: 600px;
-    width: 90%;
+    height: 100%;
+    width: 96%;
     text-align: center;
     border-radius: 35px;
     margin: 30px auto;
@@ -161,17 +391,30 @@ hr{
 }
 
 .box h2{
-    background-color: white;
-    color: #000;
-    border-radius: 35px;
+    color: white;
     left:0;
     right:0;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
-    position: absolute;
+    position: relative;
     width: 40%;
     text-align: center;
+    font-size: 3rem;
+}
+
+.box hr{
+    position: relative;
+    margin: 1% auto 25px auto;
+    background-color: white;
+    width: 70%;
+}
+
+.box p{
+    position: relative;
+    margin: 2% auto 0 auto;
+    max-width: 90%;
+    text-align: justify;
 }
 
 .box .content{
@@ -188,8 +431,122 @@ hr{
     height: 50%;
     text-align: center;
 }
-   
 
+
+.icons-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.9rem;
+    margin: 3rem 0;
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+
+.icons-container .icons{
+    padding: 1rem;
+    text-align: center;
+    border: 0.1rem solid rgba(0,0,0,.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    background: rgb(94, 146, 94);
+
+}
+
+.icons-container .icons i{
+    height: 5.5rem;
+    width: 5.5rem;
+    line-height: 6rem;
+    font-size: 2.5rem;
+    color:white;
+    background: rgb(94, 147, 94);
+    border-radius: 50%;
+}
+
+.icons-container .icons h3{
+    color: rgb(255, 255, 255);
+    padding: 1rem 0;
+    font-size: 2.5rem;
+}
+
+.icons-container .icons p{
+    color: #eee;
+    line-height: 1.8;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.box-container .box .row{
+    margin: 2rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    height: 100%;
+    
+}
+
+.row .map{
+    flex:1 1 41rem;
+    width: 40%;
+    padding: 0.8rem;
+    border: 0.1rem solid rgba(0,0,0,.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    background: rgb(94, 146, 94);
+
+}
+
+.row form{
+    flex:1 1 41rem;
+    padding: 1rem;
+    border: 0.1rem solid rgba(0,0,0,.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    background: rgb(94, 146, 94);
+}
+
+.row form .box{
+    margin:.7rem 0;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: black;
+    border: 0.1rem solid rgba(0,0,0,.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    background: #f7f7f7;
+    text-transform: none;
+    width: 100%;
+    height: 50px;
+    text-align: left;
+}
+
+.row form .box:focus{
+    background:#e9f3fc;
+}
+
+.row form textarea{
+    height: 50rem;
+    resize: none;
+}
+
+.row form .btn:hover{
+    background: rgb(70, 109, 70);
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color:#fff;
+    background: rgb(94, 146, 94);
+    border-radius: 0.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+#textarena{
+    height: 15rem;
+}
 
 
 footer{
@@ -225,6 +582,7 @@ footer .STD{
     text-align: center;
     margin: 30px 0 0 0;
 }
+
 
 
 
