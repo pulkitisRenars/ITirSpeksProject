@@ -21,18 +21,79 @@
     <a href="aktualitates.html">Aktualitātes</a>
     <a href="vakances.html">Vakances</a>
     <a href="kontakti.html">Kontakti</a>
-    <a href="login.html"><i class="fas fa-sign-in"></i></a>
+    <a id="login-btn" onclick="openForm()"><i class="fas fa-sign-in"></i></a>
+    <div class="login-popup">
+        <div class="close" onclick="closeForm()">×</div>
+        <h2>Log in</h2>
+        <form>
+          <input type="text" placeholder="Username" required>
+          <input type="password" placeholder="Password" required>
+          <button type="submit">Log in</button>
+        </form>
+      </div>
 </nav>
 </header>
 <div class="box-container">
     <div class="box">
-        <h2>Piesakies IT vakancēm</h2>
+        <h2> IT vakances</h2>
         <hr>
         <div class="vakances">
-            <p>IT nozarē atklāts jauns atvieglojums!<a href="#">Piesakies</a></p>
+            <div class="vak">
+                <h3>IT nozarē atklāts jauns atvieglojums!</h3>
+                <hr>
+            <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse velit quam corporis sapiente dolor, autem sint ipsum eos perspiciatis error enim sed aliquam placeat! Ducimus, blanditiis rerum temporibus velit architecto doloribus quasi similique asperiores, autem reprehenderit dolores aperiam adipisci quod.</p>
+            <a href="#">Pieteikties</a>
+            </div>
+
+                <div class="vak">
+                    <h3>IT nozarē atklāts jauns atvieglojums!</h3>
+                    <hr>
+                <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
+                <a href="#">Pieteikties</a>
+                </div>
+
+                    <div class="vak">
+                        <h3>IT nozarē atklāts jauns atvieglojums!</h3>
+                        <hr>
+                    <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
+                    <a href="#">Pieteikties</a>
+                    </div>
+
+                    <div class="vak">
+                        <h3>IT nozarē atklāts jauns atvieglojums!</h3>
+                        <hr>
+                    <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
+                    <a href="#">Pieteikties</a>
+                    </div>
+
+                    <div class="vak">
+                        <h3>IT nozarē atklāts jauns atvieglojums!</h3>
+                        <hr>
+                    <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
+                    <a href="#">Pieteikties</a>
+                    </div>
+
+                    <div class="vak">
+                        <h3>IT nozarē atklāts jauns atvieglojums!</h3>
+                        <hr>
+                    <p>Jauns atvieglojums atrasts IT nozarē, kas palīdzēs visiem un jebkuram.</p>
+                    <a href="#">Pieteikties</a>
+                    </div>
             
         </div>
             </div>
+</div>
+<script>
+    function openForm() {
+      document.getElementById("login-btn").style.display = "none";
+      document.querySelector(".login-popup").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.querySelector(".login-popup").style.display = "none";
+      document.getElementById("login-btn").style.display = "inline-block";
+    }
+    </script>
 <footer>
 <h1>IT ir Spēks &copy;</h1>
 <hr>

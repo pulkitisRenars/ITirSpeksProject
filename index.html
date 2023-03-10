@@ -20,33 +20,23 @@
     <a href="aktualitates.html">Aktualitātes</a>
     <a href="vakances.html">Vakances</a>
     <a href="kontakti.html">Kontakti</a>
-    <a onclick="openForm()"><i class="fas fa-sign-in"></i></a>
-    <div class="form-popup" id="myForm">
-        <form action="/action_page.php" class="form-container">
-          <h1>Login</h1>
-      
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required>
-      
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-      
-          <button type="submit" class="btn">Login</button>
-          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    <a id="login-btn" onclick="openForm()"><i class="fas fa-sign-in"></i></a>
+    <div class="bg">
+    <div class="login-popup">
+        <div class="close" onclick="closeForm()">×</div>
+        <h2>Pieslēgties</h2>
+        <form>
+          <input type="text" placeholder="Lietotājvārds" required>
+          <input type="password" placeholder="Parole" required>
+          <button type="submit">Pieslēgties</button>
         </form>
       </div>
-      
-      <script>
-      function openForm() {
-        document.getElementById("myForm").style.display = "block";
-      }
-      
-      function closeForm() {
-        document.getElementById("myForm").style.display = "none";
-      }
-      </script>
+      </div> 
 </nav>
 </header>
+
+
+
 
 <div class="home">
     <h1><span class="auto-type"></span></h1>
@@ -68,6 +58,18 @@
 </div>
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
+function openForm() {
+  document.getElementById("login-btn").style.display = "none";
+  document.querySelector(".login-popup").style.display = "block";
+  //document.querySelector(".page-container").classList.add("blur");
+}
+
+function closeForm() {
+  document.querySelector(".login-popup").style.display = "none";
+  document.getElementById("login-btn").style.display = "inline-block";
+  //document.querySelector(".page-container").classList.remove("blur");
+}
+
     var typed = new Typed(".auto-type", {
         strings: ["Attīsti IT jomu šodien!", "Pievienojies vakancei!", "Iepazīsti IT pasauli!", "Izzini jaunākās tendences!"],
         typeSpeed: 55,

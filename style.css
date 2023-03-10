@@ -15,6 +15,9 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    transition: filter 0.5s ease;
+    position: relative;
+    z-index: 0;
 }
 
 
@@ -108,6 +111,92 @@ header .navbar a:hover{
     transition: 0.3s;
 }
 
+/*login*/
+.blur {
+    z-index: 2;
+    filter: blur(5px);
+  }
+
+.login-popup {
+    z-index: 3;
+    display: none;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 600px;
+    height: 300px;
+    overflow: auto;
+    background-color: rgb(94, 146, 94);
+    border-radius: 35px;
+    border: 4px solid white;
+  }
+
+  
+  .login-popup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .login-popup input[type=text], .login-popup input[type=password] {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+  }
+  
+  .login-popup button[type=submit] {
+    width: 60%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .login-popup button[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .login-popup h2 {
+    margin-top: 30px;
+    margin-bottom: 0;
+    text-align: center;
+    color: white;
+  }
+  
+  .login-popup .close {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .login-popup .close:hover {
+    color: #bbb;
+  }
+  
+  .popup-form {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .popup-form .login-popup {
+    display: block;
+  }
+  /*end*/
 
 .home{
     margin:30% 0;
@@ -181,54 +270,140 @@ background-color: white;
 width: 70%;
 }
 
+/*aktualitates*/
+.aktualitates{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.9rem;
+    margin: 3rem 0;
+    margin-right: 5rem;
+    margin-left: 5rem;
+       
+}
+
+.aktualitates .akt{
+    padding: 1rem;
+    text-align: center;
+    border: 0.1rem solid rgba(0,0,0,.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    background: rgb(94, 146, 94);
+    height: 300px;
+}
+
+.aktualitates h3{
+    color: white;
+    font-size: 24px;
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    position: relative;
+    width: 80%;
+    text-align: center;
+}
+
+.aktualitates hr{
+    position: relative;
+    margin: 1% auto 15px auto;
+    background-color: white;
+    width: 90%;
+    height: 3px;
+}
 
 .aktualitates p{
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 15px;
-    padding: 15px;
     position: relative;
-    color: #777;
+    color: #eee;
     width: 90%;
-    text-align: justify;
-    font-size: 32px;
-    bottom: 30px;
+    text-align: center;
+    font-size: 16px;
 }
-
-.aktualitates p:hover{
-    background-color: rgb(175, 219, 175);
-    border-radius: 15px;
-    color: #444;
-}
-
-.vakances p{
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 15px;
-    padding: 15px;
-    position: relative;
-    color: #777;
-    width: 90%;
-    text-align: justify;
-    font-size: 32px;
-    bottom: 30px;
-}
-
-.vakances a{
-    background-color: rgb(113, 177, 113);
-    color: white;
-    border-radius: 15px;
-    float:right;
-    padding: 5px;
-    font-size: 20px;
-}
-
-.vakances a:hover{
-    background-color: rgb(104, 156, 104);
-    color: white;
+ .aktualitates a:hover{
+        background: rgb(113, 163, 113);
+        color: #fff;
+    }   
+    .aktualitates a{
+        margin-top: 1rem;
+        position: relative;
+        display: inline-block;
+        padding:.5rem 2rem;
+        font-size: 1.1rem;
+        cursor: pointer;
+        color:rgb(94, 146, 94);
+        background: rgb(244, 245, 244);
+        border-radius: 0.5rem;
+        box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+        bottom: 0;
+    }
+    /*end*/
+/*vakances*/
+    .vakances{
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap:1.9rem;
+        margin: 3rem 0;
+        margin-right: 5rem;
+        margin-left: 5rem;
+           
+    }
     
-}
-
+    .vakances .vak{
+        padding: 1rem;
+        text-align: center;
+        border: 0.1rem solid rgba(0,0,0,.1);
+        border-radius: 0.5rem;
+        box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+        background: rgb(94, 146, 94);
+        height: 300px;
+    }
+    
+    .vakances h3{
+        color: white;
+        font-size: 24px;
+        left:0;
+        right:0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1%;
+        position: relative;
+        width: 80%;
+        text-align: center;
+    }
+    
+    .vakances hr{
+        position: relative;
+        margin: 1% auto 15px auto;
+        background-color: white;
+        width: 90%;
+        height: 3px;
+    }
+    
+    .vakances p{
+        position: relative;
+        color: #eee;
+        width: 90%;
+        text-align: center;
+        font-size: 16px;
+    }
+     .vakances a:hover{
+            background: rgb(113, 163, 113);
+            color: #fff;
+        }   
+        .vakances a{
+            margin-top: 1rem;
+            position: relative;
+            display: inline-block;
+            padding:.5rem 2rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+            color:rgb(94, 146, 94);
+            background: rgb(244, 245, 244);
+            border-radius: 0.5rem;
+            box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+            bottom: 0;
+        }
+/*end*/
 
 .box p{
     position: relative;
